@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GALLERY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Gugi&family=Short+Stack&family=Spicy+Rice&family=Yeon+Sung&display=swap" rel="stylesheet">
+
+<style>
+  .sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 5%;
+  top: 0;
+  left: 0;
+  background-color:DarkSlateBlue;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  color:Black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:CornflowerBlue;
+}
+
+.main-1 {
+  margin-left: 200px;
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.h1 {
+  font-family: 'Gugi', cursive;
+  font-size: 100%;
+  color: white;
+  margin-left: 1%;
+ }
+
+ .h2 {
+  font-family: 'Spicy Rice', cursive;
+  margin-top: -3%;
+}
+
+.p {
+  text-align: justify;
+  position: center;
+  font-size: 75%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Center website */
+.main-2 {
+  max-width: 1200px;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+  font-family: 'Yeon Sung', cursive;
+  font-size: 16px;
+  color: white;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: RosyBrown;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+</style>
+
+</head>
+<body background="sky.jpg">
+
+<div>
+  <div class="h1">
+  <h1>FASHIHAH</h1>
+</div>
+
+<div class="main-1">
+  <div class="h2">
+  <h2 style="font-size: 200%; color: Maroon; background-color: GoldenRod; margin-right: 70%; text-align: center">GALLERY</h2>
+</div>
+
+<div class="main-2" style="margin-top: -3%">
+  <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">Show all</button>
+  <button class="btn" onclick="filterSelection('family')"> Family</button>
+  <button class="btn" onclick="filterSelection('friends')"> Friends</button>
+  <button class="btn" onclick="filterSelection('studies')"> Studies</button>
+  <button class="btn" onclick="filterSelection('club')"> Club</button>
+</div>
+
+<div class="row" style="margin-top: -0%">
+  <div class="column family">
+    <div class="content">
+      <img src="Family5.jpg" alt="Family5" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">My World</h4>
+      <p style="color: LightGray; margin-top:-7%">Goes holiday at Kuala Lumpur.</p>
+    </div>
+  </div>
+  <div class="column family">
+    <div class="content">
+      <img src="Family6.jpg" alt="Family6" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Our Happiness</h4>
+      <p style="color: LightGray; margin-top:-7%">We actually have 16 cats and 5 kitten.</p>
+    </div>
+  </div>
+  <div class="column family">
+    <div class="content">
+      <img src="Family7.jpg" alt="Family7" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Siblings</h4>
+      <p style="color: LightGray; margin-top:-7%">Our first time watch movie together.</p>
+    </div>
+  </div>
+  <div class="column family">
+    <div class="content">
+      <img src="Family8.jpg" alt="Family8" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Father Family</h4>
+      <p style="color: LightGray; margin-top:-7%">Hari Raya Aidilfitri near my father's village.</p>
+    </div>
+  </div>
+  <div class="column family">
+    <div class="content">
+      <img src="Family9.jpg" alt="Family9" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Mother Family</h4>
+      <p style="color: LightGray; margin-top:-7%">With aunts at the feast.</p>
+    </div>
+  </div>
+  <div class="column family">
+    <div class="content">
+      <img src="Family10.jpg" alt="Family10" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Cousin</h4>
+      <p style="color: LightGray; margin-top:-7%">With a cousin who has the same temperament.</p>
+    </div>
+  </div>
+
+  <div class="column friends">
+    <div class="content">
+      <img src="Friend1.jpg" alt="Friend1" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">School Trip</h4>
+      <p style="color: LightGray; margin-top:-7%">High school trip near Kuala Kangsar in 2015.</p>
+    </div>
+  </div>
+  <div class="column friends">
+    <div class="content">
+      <img src="Friend2.jpg" alt="Friend2" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Sahabat Till Jannah</h4>
+      <p style="color: LightGray; margin-top:-7%">They are like a family to me.</p>
+    </div>
+  </div>
+  <div class="column friends">
+    <div class="content">
+      <img src="Friend3.jpg" alt="Friend3" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Hostel</h4>
+      <p style="color: LightGray; margin-top:-7%">Celebrate birthday at the aspuri dormitory.</p>
+    </div>
+  </div>
+  <div class="column friends">
+    <div class="content">
+      <img src="Friend4.jpg" alt="Friend4" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Workers</h4>
+      <p style="color: LightGray; margin-top:-7%">This is my colleague in the Hardline Department.</p>
+    </div>
+  </div>
+  <div class="column friends">
+    <div class="content">
+      <img src="Friend5.jpg" alt="Friend5" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">LDR Sister</h4>
+      <p style="color: LightGray; margin-top:-7%">This Kak Lynn is like my own sister.</p>
+    </div>
+  </div>
+  <div class="column friends">
+    <div class="content">
+      <img src="Friend6.jpg" alt="Friend6" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Reunion</h4>
+      <p style="color: LightGray; margin-top:-7%">Do not expect to meet a high school friend.</p>
+    </div>
+  </div>
+
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies1.jpg" alt="Studies1" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">First Friends</h4>
+      <p style="color: LightGray; margin-top:-7%">This is my roomate when I first come to UiTMCK.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies2.jpg" alt="Studies2" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Merdeka Event</h4>
+      <p style="color: LightGray; margin-top:-7%">Got 4rd place for overall competition.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies3.jpg" alt="Studies3" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Roomates</h4>
+      <p style="color: LightGray; margin-top:-7%">Although different states but we are one and the same.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies5.jpg" alt="Studies5" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Induksi Program</h4>
+      <p style="color: LightGray; margin-top:-7%">Meet a lot new friend from difference class.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies4.jpg" alt="Studies4" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">IM1101C - IM1105C</h4>
+      <p style="color: LightGray; margin-top:-7%">We had good cooperation and chemistry.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies6.jpg" alt="Studies6" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Hangout Group</h4>
+      <p style="color: LightGray; margin-top:-7%">Always go exploring places to have fun and eat.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies7.jpg" alt="Studies7" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Miss</h4>
+      <p style="color: LightGray; margin-top:-7%">Go water park to get rid of the final stress.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies8.jpg" alt="Studies8" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Faculty Event</h4>
+      <p style="color: LightGray; margin-top:-7%">Cheerleader Team is the best dancers.</p>
+    </div>
+  </div>
+  <div class="column studies">
+    <div class="content">
+      <img src="Studies9.jpg" alt="Studies" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Night Event</h4>
+      <p style="color: LightGray; margin-top:-7%">Neon run will be our favourite.</p>
+    </div>
+  </div>
+
+  <div class="column club">
+    <div class="content">
+      <img src="Club1.jpg" alt="Club1" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">First Club</h4>
+      <p style="color: LightGray; margin-top:-7%">This is High Achievers' Club member.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club2.jpg" alt="Club2" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">First Program</h4>
+      <p style="color: LightGray; margin-top:-7%">This program provides life experiences in indigenous villages.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club3.jpg" alt="Club3" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Best Program</h4>
+      <p style="color: LightGray; margin-top:-7%">I held the mystery box and laughed at the student's reaction.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club4.jpg" alt="Club4" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Owl Team</h4>
+      <p style="color: LightGray; margin-top:-7%">Among the people who often train until early in the morning to make the program a success.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club5.jpg" alt="Club5" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Challenge Accepted</h4>
+      <p style="color: LightGray; margin-top:-7%">I was entrusted to be the program director for the JV section.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club6.jpg" alt="Club6" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">New Position</h4>
+      <p style="color: LightGray; margin-top:-7%">Thank you for this position and will carry it with trust and responsibility.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club7.jpg" alt="Club7" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">New Members</h4>
+      <p style="color: LightGray; margin-top:-7%">The program attracts new juniors or seniors into the club.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club8.jpg" alt="Club8" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">UiTM Family Day</h4>
+      <p style="color: LightGray; margin-top:-7%">Volunteers as committee member for Red Warriors.</p>
+    </div>
+  </div>
+  <div class="column club">
+    <div class="content">
+      <img src="Club9.jpg" alt="Club9" style="width:100%" height="260px">
+      <h4 style="font-family: 'Caveat', cursive; color: white; font-size: 25px; margin-top: -0%">Dinner</h4>
+      <p style="color: LightGray; margin-top:-7%">Our last memories with the senior because they will end their journey soon.</p>
+    </div>
+  </div>
+
+
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<div class="sidenav">
+  <a href="HOMEPAGE.html"><i class="fa fa-home"></i>Homepage</a>
+  <a href="BIODATA.html"><i class="fa fa-user-circle"></i>Biodata</a>
+  <a href="EXPERIENCE.html"><i class="fa fa-address-card"></i>Experience</a>
+  <a href="EDUCATION.html"><i class="fa fa-user-graduate"></i>Education</a>
+  <a href="Family.html"><i class="fa fa-users"></i>Family</a>
+  <a href="GALLERY.html"><i class="fa fa-camera"></i>Gallery</a>
+</div>
+
+</body>
+</html>
